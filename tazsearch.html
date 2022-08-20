@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>TazSearch (Searx-powered)</title>
+   <link rel="icon" href="icon.png">
+  <script type="text/javascript">
+  function startTime()
+  {
+    // Based on your computer's time
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    // Setting up the time
+    m=checkTime(m);
+    s=checkTime(s);
+    document.getElementById('txt').innerHTML="Local Time: "+h+":"+m+":"+s;
+    t=setTimeout('startTime()',500);
+    }
+    function checkTime(i)
+    {
+    if (i<10)
+    {
+      i="0" + i;
+    }
+    return i;
+    }
+    </script>
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Roboto:wght@300;400&display=swap');
+    body {
+    background-image: url(background.png);
+    font-family: Hack, 'Fira Code', monospace;
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    }
+
+    .mainbox {
+    background-color: #1b1b1b;
+    padding: 1px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    border-radius: 10px;
+    }
+
+    INPUT#tb1 {
+    width: 95%;
+    border: 1px green #f9f5d7;
+    background-color: #2f2f2f;
+    font-size: large;
+    color: white;
+    font-family: Hack, 'Fira Code', monospace;
+    margin-left: 2.5%;
+    }
+
+    th {
+    text-align: left;
+    }
+
+    form {
+    align: center;
+    }
+
+    table {
+    width: 100%;
+    }
+
+    a {
+    text-decoration: none;
+    color: white;
+    }
+
+    a:hover {
+    color: #d3869b;
+    }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="startTime()">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header></header>
+    <main>
+    <div class="mainbox">
+    <h1 align=center>TazSearch [私たちの中]</h1>
+    <form action="https://searx.org/search" method="GET">
+    <input id="tb1" type="text" name="q" placeholder="Search with Searx...">
+    </form>
+    <br>
+    <div id="txt" align=center></div>
+    <br>
+    </div>
+    <br>
+    <div class="mainbox">
+    <h3 align=center>Websites</h3>
+    <table>
+    <tr>
+    <th style="color: #fb4934">Media</th>
+    <th style="color: #83a598">Development</li>
+    <th style="color: #fabd2f">Chat</th>
+    <th style="color: #8ec07c">Miscellaneous</th>
+    </tr>
+    <tr>
+    <td>
+    <ul>
+    <li><a href="https://www.youtube.com">YouTube</a></li>
+    <li><a href="https://twitch.tv">Twitch</a></li>
+    <li><a href="https://odysee.com">Odysee</a></li>
+    <li><a href="https://joinmastodon.org">Mastodon</a></li>
+    <li><a href="https://reddit.com">Reddit</a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li><a href="https://github.com">GitHub</a></li>
+    <li><a href="https://aws.amazon.com">AWS</a></li>
+    <li><a href="https://repl.it">Repl.it</a></li>
+    <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+    <li><a href="https://uptimerobot.com/">UptimeRobot</a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li><a href="https://discord.com">Discord</a></li>
+    <li><a href="https://element.io">Element</a></li>
+    <li><a href="https://signal.org">Signal</a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li><a href="https://based.cooking">based.cooking</a></li>
+    <li><a href="https://wiby.me">wiby.me</a></li>
+    <li><a href="https://amazon.com">Amazon</a></li>
+    <li><a href="https://www.youtube.com/watch?v=E9de-cmycx8">Free Money</a></li>
+    </ul>
+    </td>
+    </tr>
+    </table>
+    <br>
+    </div>
+    <br>
+    <div class="mainbox">
+    <h4>For Linux users, copy this command into the terminal to download TazSearch:</h4>
+    <li>wget https://www.gnulectures.xyz/tazsearch.html</li>
+    <br>
+    </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
